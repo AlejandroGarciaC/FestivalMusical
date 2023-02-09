@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+
+// @mixin heading($color: blue) {
+//     text-transform: uppercase;
+//     font-size: 2.4rem;
+//     color: $color;
+// }
+
+@mixin phone{
+    @media (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin grid ($c,$g) {
+    display: grid;
+    grid-template-columns: repeat($c, 1fr);
+    gap: $g;
+}
+
+@mixin resetear-lista {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
